@@ -1,0 +1,15 @@
+1. Create a Directory on HDFS:
+hdfs dfs -mkdir /input
+2. Upload Input Text File to HDFS:
+ hdfs dfs -put /path/to/your/input.txt /input
+3. Check if the File is Uploaded:
+ hdfs dfs -ls /input
+4. View the Contents of the Uploaded Text File:
+hdfs dfs -cat /input/input.txt
+5. Run Your Hadoop MapReduce Job:
+hadoop jar /path/to/your/jarfile.jar com.mapreduce.wc.WordCount /input /output
+Here, replace /path/to/your/jarfile.jar with the actual path to your compiled JAR file,
+and com.project.wc.WordCount with the fully qualified name of your Driver class.
+/input and /output are the input and output directories on HDFS, respectively.
+6. Check the Output:
+7. hdfs dfs -cat /output/*
